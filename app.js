@@ -6,6 +6,8 @@ const TIE = 0;
 const WIN = 1;
 const LOST = 2;
 
+let isPlaying = false;
+
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
@@ -24,6 +26,10 @@ scissorsBtn.addEventListener("click", () => {
 });
 
 function play(userOption) {
+    if(isPlaying) return;
+
+    isPlaying = true;
+
     userImg.src = "img/" + userOption + ".svg";
 
     resultText.innerHTML = "Chossing!";
@@ -53,6 +59,7 @@ function play(userOption) {
                 resultText.innerHTML = "You lost!";
                 break;
         }
+        isPlaying = false;
     }, 2000);
 }
 
