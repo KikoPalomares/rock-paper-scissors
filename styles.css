@@ -24,7 +24,7 @@ button{
 .container{
     max-width: 420px;
     height: 100vh;
-    max-height: 745px;
+    max-height: 800px;
     margin: 0 auto;
     background-color: #ffb74d;
     display: flex;
